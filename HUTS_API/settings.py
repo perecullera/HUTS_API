@@ -25,7 +25,7 @@ SECRET_KEY = '@#ay#5whap=8_=nx#w2p*+j!q@zh%18#9yc4^_9i03990r1#xi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'hutsAPI',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -103,7 +104,7 @@ STATIC_URL = '/static/'
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+DATABASES['default'] =  dj_database_url.config(default='sqlite:////{0}'.format(os.path.join(BASE_DIR, 'db.sqlite3')))
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
