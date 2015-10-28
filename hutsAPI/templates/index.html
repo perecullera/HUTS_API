@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+    {% block content %}
+        <h1>All huts in BCN</h1>
+        {% for hut in huts %}
+            <div class="hut">
+                <h1><a href="">{{ hut.name }}</a></h1>
+            </div>
+        {% endfor %}
+    {% endblock content %}

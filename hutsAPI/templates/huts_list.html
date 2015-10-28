@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+    {% block content %}
+        {% for hut in huts %}
+            <div class="hut">
+                <h1><a href="">{{ hut.name }}</a></h1>
+            </div>
+        {% endfor %}
+    {% endblock content %}
