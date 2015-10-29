@@ -2,20 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="011175bf-d9fc-47d0-a378-dbe02db0e77a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/downCSV.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/geocoding_ex.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/geocoding_maprequest.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/huts.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/response.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hutsAPI/static/css/styles.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/hutsAPI/static/styles.css" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/admin.py" afterPath="$PROJECT_DIR$/hutsAPI/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/templates/base.html" afterPath="$PROJECT_DIR$/hutsAPI/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/templates/index.html" afterPath="$PROJECT_DIR$/hutsAPI/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/models.py" afterPath="$PROJECT_DIR$/hutsAPI/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HUTS_API/settings.py" afterPath="$PROJECT_DIR$/HUTS_API/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/views.py" afterPath="$PROJECT_DIR$/hutsAPI/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HUTS_API.iws" />
@@ -121,7 +107,7 @@
       <file leaf-file-name="huts_latlong.csv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HUTS_API/pyscripts/huts_latlong.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-39.779583" vertical-offset="17145" max-vertical-offset="148800">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="148800">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -172,6 +158,7 @@
         <option value="$PROJECT_DIR$/HUTS_API/pyscripts/geocoding_maprequest.py" />
         <option value="$PROJECT_DIR$/hutsAPI/admin.py" />
         <option value="$PROJECT_DIR$/HUTS_API/pyscripts/downCSV.py" />
+        <option value="$PROJECT_DIR$/HUTS_API/pyscripts/huts_latlong.csv" />
       </list>
     </option>
   </component>
@@ -487,10 +474,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.49960285" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32599118" sideWeight="0.49960285" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32599118" sideWeight="0.49960285" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39970717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32796487" sideWeight="0.50039715" order="7" side_tool="true" content_ui="tabs" />
@@ -499,7 +486,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1082,7 +1069,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HUTS_API/pyscripts/huts_latlong.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-39.779583" vertical-offset="17145" max-vertical-offset="148800">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="148800">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
