@@ -8,7 +8,4 @@ from hutsAPI.models import Hut
 def index(request):
         huts = Hut.objects.all()
         return render_to_response("index.html",RequestContext(request,
-                                             {
-                                                 'apartments': huts
-                                                 }
-                                             ))
+                                             {'huts': huts}))

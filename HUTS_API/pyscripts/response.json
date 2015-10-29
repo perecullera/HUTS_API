@@ -1,0 +1,45 @@
+{
+  "info": {
+    "messages": [],
+    "copyright": {
+      "text":
+      "\\\\xa9 2015 MapQuest, Inc.",
+      "imageUrl": u
+      "http://api.mqcdn.com/res/mqlogo.gif",
+      "imageAltText":
+      "\\xa9 2015 MapQuest, Inc."
+    },
+    "statuscode": 0},
+  "options": {"thumbMaps": True,
+    "maxResults": -1,
+    "ignoreLatLngInput": False},
+  "results": [
+    {
+      "providedLocation": {"location": "4,Abat Samso,Barcelona,ES"},
+      "locations": [
+        {"sideOfStreet": "N",
+          "linkId": "sp3e90vhmfg1",
+          "mapUrl": "http://www.mapquestapi.com/staticmap/v4/getmap?key=9msQDSYldUqqCsEe1VHsG8V2uDGoGznw&type=map&size=225,160&pois=purple-1,41.4013487,2.1604376,0,0,|&center=41.4013487,2.1604376&zoom=15&rand=752456808",
+          "displayLatLng": {"lat": 41.401349, "lng": 2.160438},
+          "adminArea6Type": "Neighborhood",
+          "adminΩArea3Type": "State",
+          "dragPoint": False,
+          "geocodeQualityCode": "L1CAA",
+          "adminArea1": "ES",
+          "geocodeQuality": "ADDRESS",
+          "adminArea3": "Catalonia",
+          "adminArea4": "",
+          "adminArea5": "Barcelona",
+          "adminArea6": "",
+          "postalCode": '08012',
+          'type': 's',
+          'adminArea1Type': 'Country',
+          'adminArea5Type': 'City',
+          'latLng': {'lat': 41.401349, 'lng': 2.160438},
+          'adminArea4Type': u'County',
+          'unknownInput': '',
+          'street': '4 Carrer de Sams\xf3'}
+  ]
+}
+]
+}

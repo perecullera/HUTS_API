@@ -1,13 +1,30 @@
 from django.contrib import admin
-from .models import Hut, Address
+from .models import Hut
+from import_export import resources
+from import_export.admin import ImportExportModelAdmin
+from import_export.admin import ImportExportActionModelAdmin
 
-class AddressInLine(admin.StackedInline):
-    model = Address
-    extra = 1
 
-class HutAdmin(admin.ModelAdmin):
-    inlines = [AddressInLine]
+
+
 
 # Register your models here.
-admin.site.register(Hut, HutAdmin)
+admin.site.register(Hut)
+
+class HutResource(resources.ModelResource):
+
+    class Meta:
+        model = Hut
+
+
+
+class HutAdmin(ImportExportActionModelAdmin):
+    resource_class = HutResource
+    pass
+
+class HutAdmin(ImportExportModelAdmin):
+    resource_class = HutResource
+    pass
+
+
 

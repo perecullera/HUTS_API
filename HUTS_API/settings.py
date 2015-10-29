@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hutsAPI',
+    'import_export',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -7,13 +7,14 @@ class Hut(models.Model):
     DC = models.IntegerField()
     name = models.CharField(max_length=100, blank=True)
     email = models.EmailField(blank=True)
+    telefon = models.IntegerField(null=True)
+    street = models.CharField(max_length=100, null=True, blank = True)
+    number = models.CharField(max_length=10, null=True, blank = True)
+    flat = models.IntegerField(null=True)
+    door = models.IntegerField(null=True)
+    postal_code = models.IntegerField(null=True)
+    latitude = models.FloatField(null = True)
+    longitude = models.FloatField(null=True)
 
-class Address(models.Model):
-    hut = models.ForeignKey(Hut)
-    street = models.CharField(max_length=100)
-    number = models.IntegerField()
-    flat = models.IntegerField()
-    door = models.IntegerField()
-    postal_code = models.IntegerField()
-    latitude = models.FloatField(blank = True)
-    longitude = models.FloatField(blank=True)
+    def __unicode__(self):
+        return self.code
