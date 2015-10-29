@@ -9,7 +9,6 @@ from import_export.admin import ImportExportActionModelAdmin
 
 
 # Register your models here.
-admin.site.register(Hut)
 
 class HutResource(resources.ModelResource):
 
@@ -22,9 +21,11 @@ class HutAdmin(ImportExportActionModelAdmin):
     resource_class = HutResource
     pass
 
-class HutAdmin(ImportExportModelAdmin):
-    resource_class = HutResource
-    pass
+# class HutAdmin(ImportExportModelAdmin):
+#     resource_class = HutResource
+#     pass
+
+admin.site.register(Hut,HutAdmin)
 
 
 
