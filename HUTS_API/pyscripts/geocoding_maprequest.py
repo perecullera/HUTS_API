@@ -16,7 +16,7 @@ django.setup()
 
 __author__ = 'perecullera'
 
-url = 'http://www.mapquestapi.com/geocoding/v1/address?key=9msQDSYldUqqCsEe1VHsG8V2uDGoGznw&location=22%%20Agullers%20,BARCELONA,ES'
+#url = 'http://www.mapquestapi.com/geocoding/v1/address?key=9msQDSYldUqqCsEe1VHsG8V2uDGoGznw&location=22%%20Agullers%20,BARCELONA,ES'
 
 csv_filepathname = "huts.csv"
 
@@ -113,6 +113,8 @@ for row in dataReader:
                 print 'saved: ' + str(saved)
     except Exception as e:
         file.write('Hut ' + str(hut)+ 'not saved'+ ' cause exception: ' + str(e))
+
+file.close()
 
 print 'row_count = ' + str(row_count) + ' saved = ' + str(saved)
 
