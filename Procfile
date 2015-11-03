@@ -1,1 +1,1 @@
-web: gunicorn HUTS_API.wsgi --timeout 15 --keep-alive 5 --log-level debug --workers=4
+web: gunicorn HUTS_API.wsgi --timeout 60 --keep-alive 5 --log-level debug --workers=4
