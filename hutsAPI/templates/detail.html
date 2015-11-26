@@ -1,1 +1,62 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <ol class="breadcrumb">
+      <li><a href="/">Inici</a></li>
+        <li class="active">Apartament</li>
+    </ol>
+    <dl class="dl-horizontal">
+        <dt>Nom</dt>
+        <dd>{{ hut.name }}</dd>
+        <dt>Codi</dt>
+        <dd>{{hut.code}}</dd>
+        <dt>Carrer</dt>
+        <dd>{{hut.street}}</dd>
+        <dt>Número</dt>
+        <dd>{{hut.number}}</dd>
+        <dt>Pis</dt>
+        <dd>{{hut.flat}}</dd>
+        <dt>Porta</dt>
+        <dd>{{hut.door}}</dd>
+        <dt>Email</dt>
+        <dd>{{hut.email}}</dd>
+        <dt>Teléfon</dt>
+        <dd>{{hut.telefon}}</dd>
+        <dt>Latitude</dt>
+        <dd>{{hut.latitude}}</dd>
+        <dt>Longitude</dt>
+        <dd>{{hut.longitude}}</dd>
+    </dl>
+    <div  id=map></div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMdYKkkshy09kLa4x7TIJd4mL4_CvjUMo&callback=initMap"></script>
+
+<script>
+
+var map;
+
+function initMap() {
+
+    var myLatLng = {lat: {{hut.latitude}}, lng: {{hut.longitude}}};
+    map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 17,
+        center: new google.maps.LatLng({{hut.latitude}},{{hut.longitude}}),
+        mapTypeId: google.maps.MapTypeId.SATELLITE
+    });
+    // Create a marker and set its position.
+
+  var marker = new google.maps.Marker({
+    map: map,
+    position: myLatLng,
+    title: '{{hut.code}}'
+  });
+
+}
+</script>
+
+<style>
+    body {font-family: sans-serif}
+    #map {width: 500px; height: 300px}
+</style>
+{% endblock content %}

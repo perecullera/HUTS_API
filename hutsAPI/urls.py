@@ -7,4 +7,9 @@ from hutsAPI import views
 urlpatterns = patterns('',
                        url(r'^$',
                            views.index,
-                           name='main'),)
+                           name='main'),
+                       url(r'^(?P<hut_id>[0-9]+)/$', views.detail, name='detail'),
+                       url(r'^map/$',
+                           views.map,
+                           name='main'),
+                       )

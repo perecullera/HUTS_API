@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+  {% load staticfiles %}
+
+{% block content %}
+<div id=map></div>
+
+<script src="{% static 'js/cluster.js' %}">
+</script>
+<script>
+
+    var map
+
+    function initMap(){
+        var center = new google.maps.LatLng(41.3949342,2.1463635);
+        var options = {
+            'zoom': 13,
+        'center': center,
+        'mapTypeId': google.maps.MapTypeId.ROADMAP
+        };
+
+        map = new google.maps.Map(document.getElementById("map"), options);
+        var markers = [];
+        {%for hut in huts%}
+            var infowindow = new google.maps.InfoWindow();
+            var latLng = new google.maps.LatLng({{hut.latitude}},{{hut.longitude}});
+            var marker = new google.maps.Marker({'position': latLng});
+            markers.push(marker);
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent('<a href="/' + '{{hut.id}}' + '">' + '{{hut.code}}' + '</a><br/>' + '{{hut.street}}' +' ' + '{{hut.number}}');
+                    infowindow.open(map, marker);
+                }
+            })(marker, {{hut.id}}));
+        {% endfor %}
+        var markerCluster = new MarkerClusterer(map, markers);
+    }
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMdYKkkshy09kLa4x7TIJd4mL4_CvjUMo&callback=initMap"></script>
+
+<style>
+    body {font-family: sans-serif}
+    #map {width: 1000px; height: 800px}
+</style>
+{% endblock content %}
