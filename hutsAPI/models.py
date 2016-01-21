@@ -9,7 +9,7 @@ class Building (models.Model):
     latitude = models.FloatField(null = True)
     longitude = models.FloatField(null=True)
     street = models.CharField(max_length=100, null=True, blank = True)
-    number = models.CharField(max_length=10, null=True, blank = True)
+    number = models.CharField(max_length=100, null=True, blank = True)
 
     def __unicode__(self):
         return self.code
