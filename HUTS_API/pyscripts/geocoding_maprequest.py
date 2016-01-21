@@ -8,7 +8,7 @@ import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE','HUTS_API.settings')
 sys.path.append("/Users/perecullera/virtualen/HUTS_API")
 
-from hutsAPI.models import Hut
+from hutsAPI.models import Hut, Building
 from urllib import quote
 import urllib2
 
@@ -32,7 +32,7 @@ dataReader = csv.reader(open(csv_filepathname), delimiter=',', quotechar='"')
 
 
 def geoCoding(list):
-    address = quote(str(list[0])) +','+quote(list[1])+','+'Barcelona'+',ES'
+    address = quote(str(list[0])) +','+quote(list[1])+','+'Barcelona'+',ES'+','+quote(list[2])
     #print 'address = ' + str(address)
     url="http://www.mapquestapi.com/geocoding/v1/address?key=9msQDSYldUqqCsEe1VHsG8V2uDGoGznw&location=%s" % address
     response = urllib2.urlopen(url)
@@ -44,7 +44,7 @@ def geoCoding(list):
         location =  wjdata['results'][0]['locations'][0]['displayLatLng']
         lat = wjdata['results'][0]['locations'][0]['displayLatLng']['lat']
         lng = wjdata['results'][0]['locations'][0]['displayLatLng']['lng']
-        #print "OK" + " lat = " + str(lat) + ' long = ' + str(lng)
+        print "OK" + " lat = " + str(lat) + ' long = ' + str(lng)
         return [status, lat, lng]
     else:
         print status
@@ -61,58 +61,63 @@ def getAddress(row):
     else:
         return '0','carrer'
 
-# def saveAdd(row, hut):
-#     address = Address()
-#     fullAdd = getAddress(row)
-#     address.number = fullAdd[0]
-#     address.street = fullAdd[1]
-#     address.hut = hut
-#     reqRes = geoCoding([address.number,address.street])
-#     #print 'resqRes: ' + str(reqRes)
-#     if reqRes[0] == 0:
-#         address.latitude = float(reqRes[1])
-#         address.longitude = float(reqRes[2])
-#         address.postal_code = int(row[10])
-#         address.save()
-#         return 'OK'
-#     else:
-#         return 'Fail'
+def getBuilding(row, hut):
+    fullAdd = getAddress(row)
+    street = fullAdd[0]
+    number = fullAdd[1]
+    zip = row[10]
+    if not Building.objects.filter(street = street,number = number,
+                                   zip = zip).exists():
+        building = Building()
+        building.zip = zip
+        building.number = number
+        building.street = street
+        reqRes = geoCoding([building.number,building.street,building.zip])
+        #print 'resqRes: ' + str(reqRes)
+        if reqRes[0] == 0:
+            building.latitude = float(reqRes[1])
+            building.longitude = float(reqRes[2])
+            building.zip = int(row[10])
+        result = building.save()
+    else:
+        building = Building()
+        building = Building.objects.filter(street = street,
+            number = number, zip = zip).first()
 
-#Hut.objects.all().delete()
+    hut.building = building
+
+
+
+
 
 saved = 0
 attempts = 0
 
 file = open('log.txt','w+')
-
-for row in dataReader:
-    try:
-        if row[4] == 'Barcelona':
-            hut = Hut()
-            if not Hut.objects.filter(code = row[0]).exists():
-                hut.code = row[0]
-                hut.DC = int(row[1])
-                hut.name = row[2]
-                #print 'row[9]: ' + row[9]
-                if row[9] is not '':
-                    hut.telefon = int(row[9])
-                hut.email = row[8]
-                fullAdd = getAddress(row)
-                hut.number = fullAdd[0]
-                hut.street = fullAdd[1]
-                reqRes = geoCoding([hut.number,hut.street])
-                #print 'resqRes: ' + str(reqRes)
-                if reqRes[0] == 0:
-                    hut.latitude = float(reqRes[1])
-                    hut.longitude = float(reqRes[2])
-                    hut.postal_code = int(row[10])
-                result = hut.save()
-                #print 'result = ' + str(result)
+while (attempts < 15):
+    for row in list(dataReader)[:1000]:
+        print row
+        try:
+            if row[4] == 'Barcelona':
                 attempts += 1
-                saved += 1
-                print 'saved: ' + str(saved)
-    except Exception as e:
-        file.write('Hut ' + str(hut)+ 'not saved'+ ' cause exception: ' + str(e))
+                hut = Hut()
+                if not Hut.objects.filter(code = row[0]).exists():
+                    hut.code = row[0]
+                    hut.DC = int(row[1])
+                    hut.name = row[2]
+                    #print 'row[9]: ' + row[9]
+                    if row[9] is not '':
+                        hut.telefon = int(row[9])
+                    hut.email = row[8]
+                    getBuilding(row, hut)
+                    result = hut.save()
+                    #print 'result = ' + str(result)
+
+                    saved += 1
+                    print 'saved: ' + str(saved)
+        except Exception as e:
+            #print str('Hut ' + str(hut.code)+ 'not saved'+ ' cause exception: ' + str(e))
+            file.write('Hut ' + str(hut.code)+ 'not saved'+ ' cause exception: ' + str(e))
 
 file.close()
 

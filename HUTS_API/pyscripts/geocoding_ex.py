@@ -38,7 +38,7 @@ def getAddress(row):
         print 'street: '+ street + ' address: '+ number
         return number.strip(),street.strip()
     else:
-        return '0','carrer'
+        return '0',''
 
 
 for row in dataReader:
