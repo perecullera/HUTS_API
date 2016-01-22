@@ -7,16 +7,22 @@
       <li><a href="/">Inici</a></li>
         <li class="active">Apartament</li>
     </ol>
+    <dl>
+        <dt>Carrer</dt>
+        <dd>{{building.street}}</dd>
+        <dt>Número</dt>
+        <dd>{{building.number}}</dd>
+        <dt>Latitude</dt>
+        <dd>{{hut.latitude}}</dd>
+        <dt>Longitude</dt>
+        <dd>{{building.longitude}}</dd>
+    </dl>
+    {% for hut in building.hut.all %}
     <dl class="dl-horizontal">
         <dt>Nom</dt>
         <dd>{{ hut.name }}</dd>
         <dt>Codi</dt>
-        <dd>{{hut.code}}</dd>
-        <dt>Carrer</dt>
-        <dd>{{hut.street}}</dd>
-        <dt>Número</dt>
-        <dd>{{hut.number}}</dd>
-        <dt>Pis</dt>
+        <dd>{{hut.code}}</dd><dt>Pis</dt>
         <dd>{{hut.flat}}</dd>
         <dt>Porta</dt>
         <dd>{{hut.door}}</dd>
@@ -24,11 +30,8 @@
         <dd>{{hut.email}}</dd>
         <dt>Teléfon</dt>
         <dd>{{hut.telefon}}</dd>
-        <dt>Latitude</dt>
-        <dd>{{hut.latitude}}</dd>
-        <dt>Longitude</dt>
-        <dd>{{hut.longitude}}</dd>
     </dl>
+    {% endfor %}
     <div  id=map></div>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMdYKkkshy09kLa4x7TIJd4mL4_CvjUMo&callback=initMap"></script>
 
@@ -38,10 +41,10 @@ var map;
 
 function initMap() {
 
-    var myLatLng = {lat: {{hut.latitude}}, lng: {{hut.longitude}}};
+    var myLatLng = {lat: {{building.latitude}}, lng: {{building.longitude}}};
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 17,
-        center: new google.maps.LatLng({{hut.latitude}},{{hut.longitude}}),
+        center: new google.maps.LatLng({{building.latitude}},{{building.longitude}}),
         mapTypeId: google.maps.MapTypeId.SATELLITE
     });
     // Create a marker and set its position.
@@ -54,6 +57,7 @@ function initMap() {
 
 }
 </script>
+
 
 <style>
     body {font-family: sans-serif}

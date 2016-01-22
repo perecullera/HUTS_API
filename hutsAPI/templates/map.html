@@ -27,7 +27,7 @@
             markers.push(marker);
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
-                    infowindow.setContent('<a href="/' + '{{hut.id}}' + '">' + '{{hut.code}}' + '</a><br/>' + '{{hut.street}}' +' ' + '{{hut.number}}');
+                    infowindow.setContent('<a href="/' + '{{hut.id}}' + '">' + '{{hut.street}}' + '</a><br/>' + '{{hut.number}}' +' ');
                     infowindow.open(map, marker);
                 }
             })(marker, {{hut.id}}));

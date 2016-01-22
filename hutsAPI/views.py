@@ -13,10 +13,10 @@ def index(request):
 
 def detail(request, hut_id):
     try:
-        hut = Hut.objects.get(pk=hut_id)
+        building = Building.objects.get(pk=hut_id)
     except Hut.DoesNotExist:
         raise Http404("HUT does not exist")
-    return render(request, 'detail.html', {'hut': hut})
+    return render(request, 'detail.html', {'building': building})
 
 def map(request):
         buildings = Building.objects.all()
