@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="011175bf-d9fc-47d0-a378-dbe02db0e77a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HUTS_API/pyscripts/.~lock.huts.csv#" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/templates/detail.html" afterPath="$PROJECT_DIR$/hutsAPI/templates/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/templates/map.html" afterPath="$PROJECT_DIR$/hutsAPI/templates/map.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/views.py" afterPath="$PROJECT_DIR$/hutsAPI/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HUTS_API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,10 +38,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="map.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="map.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/hutsAPI/templates/map.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="2.6349206" vertical-offset="72" max-vertical-offset="750">
+                <state vertical-scroll-proportion="-20.75" vertical-offset="72" max-vertical-offset="750">
                   <caret line="38" column="130" selection-start-line="38" selection-start-column="130" selection-end-line="38" selection-end-column="130" />
                   <folding />
                 </state>
@@ -93,11 +88,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/hutsAPI/templates/detail.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-10.75" vertical-offset="387" max-vertical-offset="1065">
-                  <caret line="43" column="63" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
+                <state vertical-scroll-proportion="0.1092233" vertical-offset="180" max-vertical-offset="1065">
+                  <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -150,7 +145,7 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/hutsAPI/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7746479" vertical-offset="0" max-vertical-offset="570">
+                <state vertical-scroll-proportion="0.37844038" vertical-offset="0" max-vertical-offset="570">
                   <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
                   <folding />
                 </state>
@@ -191,8 +186,8 @@
         <option value="$PROJECT_DIR$/HUTS_API/pyscripts/geocoding_maprequest.py" />
         <option value="$PROJECT_DIR$/hutsAPI/models.py" />
         <option value="$PROJECT_DIR$/hutsAPI/views.py" />
-        <option value="$PROJECT_DIR$/hutsAPI/templates/detail.html" />
         <option value="$PROJECT_DIR$/hutsAPI/templates/map.html" />
+        <option value="$PROJECT_DIR$/hutsAPI/templates/detail.html" />
       </list>
     </option>
   </component>
@@ -495,10 +490,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.49960285" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.669863" sideWeight="0.49960285" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36438355" sideWeight="0.49960285" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1155,14 +1150,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hutsAPI/templates/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.75" vertical-offset="387" max-vertical-offset="1065">
-          <caret line="43" column="63" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HUTS_API/pyscripts/geocoding_maprequest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="1905">
@@ -1181,7 +1168,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hutsAPI/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7746479" vertical-offset="0" max-vertical-offset="570">
+        <state vertical-scroll-proportion="0.37844038" vertical-offset="0" max-vertical-offset="570">
           <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding />
         </state>
@@ -1189,8 +1176,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hutsAPI/templates/map.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.6349206" vertical-offset="72" max-vertical-offset="750">
+        <state vertical-scroll-proportion="-20.75" vertical-offset="72" max-vertical-offset="750">
           <caret line="38" column="130" selection-start-line="38" selection-start-column="130" selection-end-line="38" selection-end-column="130" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hutsAPI/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1092233" vertical-offset="180" max-vertical-offset="1065">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding />
         </state>
       </provider>
