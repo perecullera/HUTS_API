@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="011175bf-d9fc-47d0-a378-dbe02db0e77a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/templates/detail.html" afterPath="$PROJECT_DIR$/hutsAPI/templates/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/templates/index.html" afterPath="$PROJECT_DIR$/hutsAPI/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/views.py" afterPath="$PROJECT_DIR$/hutsAPI/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HUTS_API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,11 +30,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5492064">
       <split-first>
         <leaf>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/hutsAPI/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-                  <caret line="23" column="51" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="51" />
+                <state vertical-scroll-proportion="0.27522936" vertical-offset="0" max-vertical-offset="436">
+                  <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
                   <folding />
                 </state>
               </provider>
@@ -88,11 +90,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/hutsAPI/templates/detail.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.1092233" vertical-offset="180" max-vertical-offset="1065">
-                  <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+                <state vertical-scroll-proportion="-1.25" vertical-offset="180" max-vertical-offset="1065">
+                  <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/hutsAPI/templates/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="225">
+                  <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
                   <folding />
                 </state>
               </provider>
@@ -178,16 +190,16 @@
         <option value="$PROJECT_DIR$/HUTS_API/urls.py" />
         <option value="$PROJECT_DIR$/HUTS_API/wsgi.py" />
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/hutsAPI/templates/index.html" />
         <option value="$PROJECT_DIR$/hutsAPI/templates/base.html" />
         <option value="$PROJECT_DIR$/hutsAPI/urls.py" />
         <option value="$PROJECT_DIR$/hutsAPI/static/cluster.js" />
         <option value="$PROJECT_DIR$/HUTS_API/pyscripts/geocoding_ex.py" />
         <option value="$PROJECT_DIR$/HUTS_API/pyscripts/geocoding_maprequest.py" />
         <option value="$PROJECT_DIR$/hutsAPI/models.py" />
-        <option value="$PROJECT_DIR$/hutsAPI/views.py" />
         <option value="$PROJECT_DIR$/hutsAPI/templates/map.html" />
         <option value="$PROJECT_DIR$/hutsAPI/templates/detail.html" />
+        <option value="$PROJECT_DIR$/hutsAPI/templates/index.html" />
+        <option value="$PROJECT_DIR$/hutsAPI/views.py" />
       </list>
     </option>
   </component>
@@ -999,13 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hutsAPI/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="225">
-          <caret line="6" column="104" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hutsAPI/static/js/cluster.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="19650">
@@ -1158,14 +1163,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hutsAPI/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="23" column="51" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hutsAPI/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37844038" vertical-offset="0" max-vertical-offset="570">
@@ -1184,8 +1181,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hutsAPI/templates/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1092233" vertical-offset="180" max-vertical-offset="1065">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state vertical-scroll-proportion="-1.25" vertical-offset="180" max-vertical-offset="1065">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hutsAPI/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="225">
+          <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hutsAPI/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27522936" vertical-offset="0" max-vertical-offset="436">
+          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
           <folding />
         </state>
       </provider>

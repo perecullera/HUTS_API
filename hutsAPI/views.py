@@ -7,7 +7,7 @@ from hutsAPI.models import Building, Hut
 
 
 def index(request):
-        buildings = Building.objects.all()
+        buildings = Building.objects.all().order_by('number','street')
         return render_to_response("index.html",RequestContext(request,
                                              {'huts': buildings}))
 

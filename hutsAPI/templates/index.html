@@ -4,7 +4,7 @@
         <h1>All huts in BCN</h1>
         {% for hut in huts %}
             <div class="hut">
-                <h4><a href="{% url 'detail' hut.id %}">{{ hut.code }} {{hut.street}} {{hut.number}}</a></h4>
+                <h4><a href="{% url 'detail' hut.id %}"> {{hut.number}} - {{hut.street}}</a></h4>
             </div>
         {% endfor %}
     {% endblock content %}
