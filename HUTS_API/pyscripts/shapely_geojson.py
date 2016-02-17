@@ -24,7 +24,7 @@ __author__ = 'perecullera'
 
 csv_filepathname = "huts.csv"
 
-file = open('log'+str(date.today())+'.txt','w+')
+file = open('logs/log'+str(date.today())+'.txt','w+')
 
 # load GeoJSON file containing sectors
 #with ('districtes_geo.json', 'r') as f:
