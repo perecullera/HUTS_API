@@ -1,0 +1,8 @@
+http://www.mapquestapi.com/geocoding/v1/address?key=9msQDSYldUqqCsEe1VHsG8V2uDGoGznw&street=23 Alcalà de Guadaira &city=Barcelona&country=Spain&postalCode=08020
+
+
+http://www.mapquestapi.com/geocoding/v1/address?key=9msQDSYldUqqCsEe1VHsG8V2uDGoGznw&street=10 Arquitecte Sert &city=Barcelona&country=Spain&postalCode=08005
+
+
+http://www.mapquestapi.com/geocoding/v1/address?key=9msQDSYldUqqCsEe1VHsG8V2uDGoGznw&inFormat=json&json={"location":{"street": "10 Arquitecte Sert","city":"Barcelona","country":"Spain","postalCode":"08005"}}
+

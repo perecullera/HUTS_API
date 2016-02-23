@@ -21,6 +21,7 @@ class Hut(models.Model):
     name = models.CharField(max_length=100, blank=True)
     email = models.EmailField(blank=True)
     telefon = models.IntegerField(null=True)
+    bloc = models.CharField(max_length=10, blank=True)
     flat = models.IntegerField(null=True)
     door = models.IntegerField(null=True)
     building = models.ForeignKey(Building,related_name='hut', default=0)
