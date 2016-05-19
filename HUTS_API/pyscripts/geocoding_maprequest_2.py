@@ -11,6 +11,7 @@ sys.path.append("/Users/perecullera/virtualen/HUTS_API")
 from hutsAPI.models import Hut, Building
 from urllib import quote
 import urllib2
+import shapely_geojson
 
 django.setup()
 
@@ -34,15 +35,13 @@ dataReader = csv.reader(open(csv_filepathname), delimiter=',', quotechar='"')
 
 def geoCoding(list):
     address = quote(str(list[0])) +','+quote(list[1])+','+'Barcelona'+',ES'+','+quote(list[2])
-    #print 'address = ' + str(address)
+    address = quote(str(list[0]) + ' ' + list[1]) + '&city=Barcelona&country=ES&postalCode=' + quote(list[2])
     url="http://www.mapquestapi.com/geocoding/v1/address?key=9msQDSYldUqqCsEe1VHsG8V2uDGoGznw&street=%s" % address
     response = urllib2.urlopen(url)
-    #print 'response = ' + str(response)
     wjdata = json.load(response)
-    #print 'json response = ' + str(wjdata)
     status = wjdata['info']['statuscode']
     if status== 0 :
-        location =  wjdata['results'][0]['locations'][0]['displayLatLng']
+        #location =  wjdata['results'][0]['locations'][0]['displayLatLng']
         lat = wjdata['results'][0]['locations'][0]['displayLatLng']['lat']
         lng = wjdata['results'][0]['locations'][0]['displayLatLng']['lng']
         print "OK" + " lat = " + str(lat) + ' long = ' + str(lng)
@@ -55,27 +54,37 @@ def getAddress(row):
     fullAdd = row[3]
     addList = fullAdd.split(',')
     #bloc by default is '' and only full if there's bloc
-    bloc = ' '
+    bloc = ''
+    pis = ''
+    porta = ''
     #TODO carrer, num, escala/edifici, pis porta
     if len(addList)>1:
         street = addList[0]
         number = addList[1]
-        #print 'street: '+ street + ' address: '+ number
-        if len(addList)>=2:
-            bloc = addList[2]
-            fullPisPorta = addList[3]
+        length_aux = len(addList)
+        #we make sure building have flat door info
+        if len(addList)>2:
+            #if length = 4 means it have bloc info
+            if (len(addList)==4):
+                bloc = addList[2]
+                fullPisPorta = addList[3].strip()
+            #otherwise it doesn't have bloc info
+            else:
+                fullPisPorta = addList[2].strip()
             pisPortaList = fullPisPorta.split(' ')
             pis = pisPortaList[0]
-            porta = pisPortaList[1]
+            porta = ' '
+            if len(pisPortaList)>1:
+                porta = pisPortaList[1]
 
-        return number.strip(),street.strip(), bloc, pis.split(), porta.split()
+        return number.strip(),street.strip(), bloc, pis.strip(), porta.strip()
     else:
         return '0','carrer'
 
 def getBuilding(row, hut):
     fullAdd = getAddress(row)
-    street = fullAdd[0]
-    number = fullAdd[1]
+    number = fullAdd[0]
+    street = fullAdd[1]
     bloc = fullAdd[2]
     pis = fullAdd[3]
     porta = fullAdd[4]
@@ -86,8 +95,8 @@ def getBuilding(row, hut):
         building.zip = zip
         building.number = number
         building.street = street
+        building.bloc = bloc
         reqRes = geoCoding([building.number,building.street,building.zip])
-        #print 'resqRes: ' + str(reqRes)
         if reqRes[0] == 0:
             building.latitude = float(reqRes[1])
             building.longitude = float(reqRes[2])
@@ -95,10 +104,9 @@ def getBuilding(row, hut):
         result = building.save()
     else:
         building = Building()
-        building = Building.objects.filter(street = street,
-            number = number, zip = zip).first()
-    hut.bloc = bloc
-    hut.pis = porta
+        building = Building.objects.filter(street = street, number = number, zip = zip).first()
+    hut.flat = pis
+    hut.door = porta
     hut.building = building
 
 
@@ -107,10 +115,12 @@ def getBuilding(row, hut):
 
 saved = 0
 attempts = 0
+row_count = 0
 
 file = open('log.txt','w+')
+s_g = shapely_geojson.shapely_geocoding()
 while (attempts < 15):
-    for row in list(dataReader)[:1000]:
+    for row in list(dataReader)[:500]:
         print row
         try:
             if row[4] == 'Barcelona':
@@ -125,11 +135,15 @@ while (attempts < 15):
                         hut.telefon = int(row[9])
                     hut.email = row[8]
                     getBuilding(row, hut)
-                    result = hut.save()
-                    #print 'result = ' + str(result)
+                    if s_g.inBcn(hut.building):
+                        result = hut.save()
+                        #print 'result = ' + str(result)
 
-                    saved += 1
-                    print 'saved: ' + str(saved)
+                        saved += 1
+                        print 'saved: ' + str(saved)
+                    row_count += 1
+                    print 'row counted ' + str(row_count)
+
         except Exception as e:
             #print str('Hut ' + str(hut.code)+ 'not saved'+ ' cause exception: ' + str(e))
             file.write('Hut ' + str(hut.code)+ 'not saved'+ ' cause exception: ' + str(e))

@@ -10,6 +10,10 @@ class Building (models.Model):
     longitude = models.FloatField(null=True)
     street = models.CharField(max_length=100, null=True, blank = True)
     number = models.CharField(max_length=100, null=True, blank = True)
+    bloc = models.CharField(max_length=10, blank=True)
+
+    def __repr__(self):
+      return 'Building: ' + str(self.street)+ ' ' + str(self.number)
 
     def __unicode__(self):
         return self.code
@@ -21,9 +25,8 @@ class Hut(models.Model):
     name = models.CharField(max_length=100, blank=True)
     email = models.EmailField(blank=True)
     telefon = models.IntegerField(null=True)
-    bloc = models.CharField(max_length=10, blank=True)
-    flat = models.IntegerField(null=True)
-    door = models.IntegerField(null=True)
+    flat = models.CharField(max_length=10, null=True)
+    door = models.CharField(max_length=10, null=True)
     building = models.ForeignKey(Building,related_name='hut', default=0)
 
     def __unicode__(self):
