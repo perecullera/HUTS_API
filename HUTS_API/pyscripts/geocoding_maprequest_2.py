@@ -20,7 +20,7 @@ __author__ = 'perecullera'
 #url = 'http://www.mapquestapi.com/geocoding/v1/address?key= &location=22%%20Agullers%20,BARCELONA,ES'
 #url2 = 'http://www.mapquestapi.com/geocoding/v1/address?key=YOUR_KEY_HERE&street=1090 N Charlotte St&city=Lancaster&state=PA&postalCode=17603
 
-csv_filepathname = "huts.csv"
+csv_filepathname = "csvs/huts_prova_100_gene.csv"
 
 
 sys.path.append("/Users/perecullera/virtualen/HUTS_API/HUTS_API")
@@ -96,6 +96,7 @@ def getBuilding(row, hut):
         building.number = number
         building.street = street
         building.bloc = bloc
+        building.geocoded
         reqRes = geoCoding([building.number,building.street,building.zip])
         if reqRes[0] == 0:
             building.latitude = float(reqRes[1])
@@ -136,17 +137,17 @@ while (attempts < 15):
                     hut.email = row[8]
                     getBuilding(row, hut)
                     if s_g.inBcn(hut.building):
-                        result = hut.save()
-                        #print 'result = ' + str(result)
-
-                        saved += 1
-                        print 'saved: ' + str(saved)
+                        hut.building.geocoded = True
+                        hut.building.save()
+                    result = hut.save()
+                    saved += 1
+                    print 'saved: ' + str(saved)
                     row_count += 1
                     print 'row counted ' + str(row_count)
 
         except Exception as e:
             #print str('Hut ' + str(hut.code)+ 'not saved'+ ' cause exception: ' + str(e))
-            file.write('Hut ' + str(hut.code)+ 'not saved'+ ' cause exception: ' + str(e))
+            file.write('Hut ' + str(hut.code)+ 'not saved'+ ' cause exception: ' + str(e) + "\n")
 
 file.close()
 

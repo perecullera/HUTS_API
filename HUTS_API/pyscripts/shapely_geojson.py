@@ -20,9 +20,13 @@ class shapely_geocoding:
 
     csv_filepathname = "huts.csv"
 
+    print 'current path' + os.path.abspath(os.curdir)
     file = open('logs/log'+str(date.today())+'.txt','w+')
 
-    f = open('districtes_geo.json', 'r')
+    #print os.path.abspath(os.curdir)
+    #os.chdir("..") #one folder up
+    #print os.path.abspath(os.curdir)
+    f = open('jsons/districtes_geo.json', 'r')
     js = json.load(f)
 
 

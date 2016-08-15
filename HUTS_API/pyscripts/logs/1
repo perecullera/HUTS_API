@@ -1,0 +1,4 @@
+sourceProj = new Proj4js.Proj("EPSG:4326"); // WGS84 LonLat
+destProj = new Proj4js.Proj("EPSG:32631"); // UTM WGS84 Huso 31 N
+
+Proj4js.defs["EPSG:32631"] = "+proj=utm +zone=31 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"

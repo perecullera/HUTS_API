@@ -11,6 +11,7 @@ class Building (models.Model):
     street = models.CharField(max_length=100, null=True, blank = True)
     number = models.CharField(max_length=100, null=True, blank = True)
     bloc = models.CharField(max_length=10, blank=True)
+    geocoded = models.BooleanField(default=False)
 
     def __repr__(self):
       return 'Building: ' + str(self.street)+ ' ' + str(self.number)

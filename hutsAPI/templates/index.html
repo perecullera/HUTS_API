@@ -1,10 +1,18 @@
 {% extends "base.html" %}
 
     {% block content %}
-        <h1>All huts in BCN</h1>
-        {% for hut in huts %}
-            <div class="hut">
-                <h4><a href="{% url 'detail' hut.id %}"> {{hut.street}}  {{hut.number}} </a></h4>
-            </div>
-        {% endfor %}
+        <div class="hut" style="float:left">
+                <h1>All huts in BCN</h1>
+                    {% for hut in huts %}
+
+                        <h4><a href="{% url 'detail' hut.id %}"> {{hut.street}}  {{hut.number}} </a></h4>
+                    {% endfor %}
+        </div>
+        <div class="hut_not" >
+            <h1>.........All huts not geo in BCN</h1>
+                {% for hut_not in huts_not %}
+                    <h4><a style="color:red" href="{% url 'detail' hut_not.id %}"> {{hut_not.street}}  {{hut_not.number}} </a></h4>
+                {% endfor %}
+        </div>
+
     {% endblock content %}
