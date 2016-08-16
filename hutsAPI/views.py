@@ -8,9 +8,10 @@ from hutsAPI.models import Building, Hut
 
 def index(request):
         buildings = Building.objects.all().order_by('street','number')
-        build_not_geo = Building.objects.all().filter(geocoded= False)
+        builds_not_geo = Building.objects.all().filter(geocoded= False)
+        builds_geo = Building.objects.all().filter(geocoded= True)
         return render_to_response("index.html",RequestContext(request,
-                                             {'huts': buildings,'huts_not' : build_not_geo}))
+                                             {'builds': buildings,'builds_not' : builds_not_geo, 'builds_geo': builds_geo}))
 
 def detail(request, hut_id):
     try:
