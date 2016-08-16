@@ -11,6 +11,8 @@ class Building (models.Model):
     street = models.CharField(max_length=100, null=True, blank = True)
     number = models.CharField(max_length=100, null=True, blank = True)
     bloc = models.CharField(max_length=10, blank=True)
+    district = models.CharField(max_length=100, null=True, blank = True)
+    neighborhood = models.CharField(max_length=100, null=True, blank = True)
     geocoded = models.BooleanField(default=False)
 
     def __repr__(self):

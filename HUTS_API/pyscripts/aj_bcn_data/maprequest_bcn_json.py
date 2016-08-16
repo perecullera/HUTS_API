@@ -31,7 +31,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE','HUTS_API.settings')
 dataReader = csv.reader(open(csv_filepathname), delimiter=',', quotechar='"')
 row_count = sum(1 for row in dataReader)
 
-dataReader = csv.reader(open(csv_filepathname), delimiter=',', quotechar='"')
+#dataReader = csv.reader(open(csv_filepathname), delimiter=',', quotechar='"')
 
 
 #list[0]= number, list[1]=street, list[2]=zip
@@ -99,6 +99,66 @@ def getAddress(row):
         return number.strip(),street.strip(), bloc, pis.strip(), porta.strip()
     else:
         return '0','carrer'
+
+
+#gets a row from csv
+#returns the address dict: number, street, bloc, pis, porta, barri, districte
+def read_row_aj(row):
+    options = {'C' : 'carrer',
+               'PL' : 'plaça    ',
+               'PTGE' : 'peatge',
+               'VIA' : 'via',
+               'RBLA' : 'rambla',
+               'RIER' : 'riera',
+               'AV' : 'avinguda',
+               'PG' : 'passeig',
+               'CTRA' : 'carretera',
+               'G.V.':'gran via',
+               'TRAV':'travessera',
+               'RDA':'ronda',
+               'BDA':'BDA',
+               'PLA':'pla',
+               'TRVS':'travessia',
+               'CSTA':'costa',
+               }
+    address = {}
+    address['tipus_carrer'] = options[row[3]]()
+    address['carrer'] = row[4]
+    address['numero'] = row[6]
+    #is letter
+    if row[7]!='':
+        address['numero'] =+ row[7]
+    #is number 2?
+    if row[8]!='':
+        address['numero'] =+ row[8]
+    #is letter 2?
+    if row[9] != '':
+        address['numero'] =+ row[9]
+    address['bloc'] = ''
+    #it's bloc?
+    if row[10] != '':
+        address['bloc'] = row[10]
+    #it's portal?
+    if row[11] != '':
+        address['bloc'] =+ row[11]
+    #it's 'escala'?
+    if row[12] != '':
+        address['bloc'] =+ row[12]
+    #hi ha pis?
+    pis =''
+    if row[13] != '':
+        address['bloc'] = row[13]
+    #hi ha porta
+    address['porta'] = ''
+    if row[14] != '':
+        address['porta'] = row[14]
+    #districte
+    address['districte'] = row[1]
+    #barri
+    address['barri'] = row[2]
+    return address
+
+
 
 def getBuilding(row, hut):
     fullAdd = getAddress(row)

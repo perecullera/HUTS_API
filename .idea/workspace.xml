@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="011175bf-d9fc-47d0-a378-dbe02db0e77a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/csvs/huts.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/csvs/huts_prova_100_gene.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/jsons/districtes_geo.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/maprequest_bcn_json.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/shapely_geojson_bcn.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/test_geoCoding.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hutsAPI/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hutsAPI/migrations/0002_auto_20160223_2050.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hutsAPI/migrations/0003_auto_20160223_2317.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/templates/detail.html" afterPath="$PROJECT_DIR$/hutsAPI/templates/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/templates/index.html" afterPath="$PROJECT_DIR$/hutsAPI/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/views.py" afterPath="$PROJECT_DIR$/hutsAPI/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/maprequest_bcn_json.py" afterPath="$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/maprequest_bcn_json.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HUTS_API/settings.py" afterPath="$PROJECT_DIR$/HUTS_API/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hutsAPI/models.py" afterPath="$PROJECT_DIR$/hutsAPI/models.py" />
     </list>
     <ignored path="HUTS_API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,11 +72,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hutsAPI/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15813252">
-              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HUTS_API/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -109,13 +115,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maprequest_bcn_json.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="maprequest_bcn_json.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/maprequest_bcn_json.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            <state vertical-scroll-proportion="2.0165663">
+              <caret line="189" column="27" selection-start-line="189" selection-start-column="27" selection-end-line="189" selection-end-column="27" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#2229#3209#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -148,7 +155,7 @@
       </map>
     </option>
     <push-targets>
-      <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="heroku" target-branch="master" />
+      <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="github" target-branch="master" />
     </push-targets>
   </component>
   <component name="IdeDocumentHistory">
@@ -157,7 +164,6 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/hutsAPI/templates/huts_list.html" />
         <option value="$PROJECT_DIR$/HUTS_API/pyscripts/response.json" />
-        <option value="$PROJECT_DIR$/HUTS_API/settings.py" />
         <option value="$PROJECT_DIR$/csvscript.py" />
         <option value="$PROJECT_DIR$/HUTS_API/pyscripts/downCSV.py" />
         <option value="$PROJECT_DIR$/HUTS_API/pyscripts/huts_latlong.csv" />
@@ -182,13 +188,14 @@
         <option value="$PROJECT_DIR$/HUTS_API/pyscripts/fonts_xml_parser.py" />
         <option value="$PROJECT_DIR$/HUTS_API/pyscripts/shapely_geojson.py" />
         <option value="$PROJECT_DIR$/HUTS_API/pyscripts/logs/log2016-08-15.txt" />
-        <option value="$PROJECT_DIR$/hutsAPI/models.py" />
         <option value="$PROJECT_DIR$/HUTS_API/pyscripts/geocoding_maprequest_2.py" />
         <option value="$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/test_geoCoding.py" />
         <option value="$PROJECT_DIR$/hutsAPI/views.py" />
         <option value="$PROJECT_DIR$/hutsAPI/templates/index.html" />
-        <option value="$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/maprequest_bcn_json.py" />
         <option value="$PROJECT_DIR$/hutsAPI/templates/detail.html" />
+        <option value="$PROJECT_DIR$/HUTS_API/settings.py" />
+        <option value="$PROJECT_DIR$/hutsAPI/models.py" />
+        <option value="$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/maprequest_bcn_json.py" />
       </list>
     </option>
   </component>
@@ -269,7 +276,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -302,50 +309,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pyscripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HUTS_API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HUTS_API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HUTS_API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyscripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HUTS_API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HUTS_API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HUTS_API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyscripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="csvs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -368,32 +331,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="aj_bcn_data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HUTS_API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HUTS_API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HUTS_API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyscripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aj_bcn_data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="csvs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -720,7 +657,13 @@
       <option name="project" value="LOCAL" />
       <updated>1471289900244</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ordenant carpetes a pyscripts&#10;nou script per dades ajuntament">
+      <created>1471358924273</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1471358924273</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -767,7 +710,8 @@
     <MESSAGE value="Some work with OpenStreetMap geocoding webservice&#10;New Script for geointerference with shapely and new BCN geojson geometries" />
     <MESSAGE value="blog title&#10;" />
     <MESSAGE value="added geocoded to model and script&#10;two divs floated on index.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="added geocoded to model and script&#10;two divs floated on index.html" />
+    <MESSAGE value="ordenant carpetes a pyscripts&#10;nou script per dades ajuntament" />
+    <option name="LAST_COMMIT_MESSAGE" value="ordenant carpetes a pyscripts&#10;nou script per dades ajuntament" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1350,8 +1294,13 @@
           <line>51</line>
           <option name="timeStamp" value="274" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/maprequest_bcn_json.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="275" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="275" />
+      <option name="time" value="276" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1423,13 +1372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HUTS_API/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="12" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1719,16 +1661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/maprequest_bcn_json.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/shapely_geojson_bcn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1745,11 +1677,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HUTS_API/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hutsAPI/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15813252">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HUTS_API/pyscripts/aj_bcn_data/maprequest_bcn_json.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.0165663">
+          <caret line="189" column="27" selection-start-line="189" selection-start-column="27" selection-end-line="189" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#2229#3209#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
