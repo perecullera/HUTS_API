@@ -19,7 +19,7 @@ class Building (models.Model):
       return 'Building: ' + str(self.street)+ ' ' + str(self.number)
 
     def __unicode__(self):
-        return self.code
+        return str(self.street)+ ' ' + str(self.number)
 
 #class to model Huts
 class Hut(models.Model):
